@@ -108,25 +108,26 @@
 
         <div class="highlight-box">
             <h3>🔒 TL;DR - Quick Summary</h3>
-            <p>Michi is a privacy-first, local-first app. Your plans, goals, checklists, sessions, and reflection notes are stored directly on your device in SQLite. We only transmit data to third-party AI providers when you explicitly create a plan or format notes, with mandatory consent and strict Zero Data Retention (ZDR) guarantees.</p>
+            <p>Michi is a privacy-first app designed to keep your focus on your goals. Your plans, goals, tasks, sessions, and reflection notes are stored privately on your physical device. We only transmit data to third-party services when you explicitly create an AI plan, format notes, manage a Pro subscription, or when anonymous diagnostic crash logs are collected to maintain app stability.</p>
         </div>
 
         <h2>1. On-Device Data Storage</h2>
-        <p>Your data (Plans, Goals, Checklists, Sessions, and Reflection Notes) is stored <strong>locally on your device</strong> in a private SQLite database. We do not inspect, collect, or sell your plans, session history, or personal notes.</p>
-        <p>Data never leaves your device unless:</p>
+        <p>Your data (Plans, Goals, Tasks, Sessions, and Reflection Notes) is stored <strong>locally on your device</strong>. We do not inspect, collect, or sell your plans, session history, or personal notes.</p>
+        <p>Your personal data stays privately on your device. External transmission occurs only in the following transparent scenarios:</p>
         <ul>
-            <li>You explicitly use the "Generate with AI" feature to build a structured plan</li>
-            <li>You explicitly use the "Format Notes" feature on your reflection notes</li>
+            <li>You explicitly use "Generate with AI" or "Format Notes" (routed to vetted AI providers under strict Zero Data Retention).</li>
+            <li>You purchase or restore a Michi Pro subscription (processed anonymously through RevenueCat and Google Play Billing).</li>
+            <li>An unexpected error occurs (anonymized crash traces collected by Sentry to fix bugs).</li>
         </ul>
 
         <h2>2. AI Data Processing (Apple 5.1.2i & Google Play Disclosure)</h2>
         
         <div class="ai-disclosure">
             <h3>⚠️ Third-Party AI Data Processing & Zero Data Retention</h3>
-            <p>When you explicitly invoke AI plan generation or note formatting, Michi transmits your <strong>goal title, experience level, and optional context</strong> through secure HTTPS to vetted AI providers via OpenRouter:</p>
+            <p>When you explicitly invoke AI plan generation or note formatting, Michi transmits your <strong>plan topic, experience level, optional context, or the note text you choose to format</strong> through secure HTTPS to vetted AI providers via OpenRouter:</p>
             <ul>
-                <li><strong>AI Providers:</strong> OpenAI (via Microsoft Azure), Meta Llama (via Groq), Mistral AI (EU Sovereign Cloud), and Google Gemini (via Google Cloud Vertex AI)</li>
-                <li><strong>Purpose:</strong> Generate customized sequential stages, goals, practice checklists, and format reflection notes</li>
+                <li><strong>AI Providers:</strong> OpenAI (via Microsoft Azure), Meta Llama (via Groq), Mistral AI (EU Sovereign Cloud), Google Gemini (via Google Cloud Vertex AI), and DeepSeek (via OpenRouter)</li>
+                <li><strong>Purpose:</strong> Generate customized sequential stages, goals, actionable tasks, and format reflection notes</li>
                 <li><strong>Zero Data Retention (ZDR) Guarantee:</strong> All AI requests are routed exclusively to endpoints that enforce strict Zero Data Retention (<code>zdr: true</code>) and training denial (<code>data_collection: "deny"</code>). Your prompts are <strong>never used to train AI models</strong></li>
                 <li><strong>Security in Transit:</strong> All communications use TLS/HTTPS encryption</li>
             </ul>
@@ -140,32 +141,77 @@
             <li>Provides an instant toggle to revoke AI consent anytime in Settings</li>
         </ul>
 
-        <h2>3. What We Don't Do</h2>
+        <h2>3. Diagnostics, Billing & Cloud Infrastructure</h2>
+        <p>To ensure app reliability and deliver subscription entitlements, Michi integrates with trusted, privacy-conscious service providers:</p>
         <ul>
-            <li>❌ We do not sell your personal data or learning history to third parties</li>
+            <li><strong>Sentry:</strong> Anonymized crash logs and device diagnostics (such as OS version and device model) to detect errors and improve performance. No personal plans, notes, or identifiable details are collected.</li>
+            <li><strong>RevenueCat & Google Play Billing:</strong> Handles purchase verification and subscription receipts using an anonymous app user ID. No financial or credit card data is accessible to Michi.</li>
+            <li><strong>Supabase:</strong> Stateless cloud edge functions that proxy AI requests and enforce fair rate limits without persisting your plan contents or reflection notes.</li>
+        </ul>
+
+        <h2>4. What We Don't Do</h2>
+        <ul>
+            <li>❌ We do not sell your personal data or personal progress history to third parties</li>
             <li>❌ We do not use your personal notes or goals to train AI models</li>
             <li>❌ We do not track your behavior across other apps or websites</li>
             <li>❌ We do not show you third-party advertisements</li>
             <li>❌ We do not require a mandatory cloud account to use the app</li>
         </ul>
 
-        <h2>4. Data Retention & Deletion</h2>
+        <h2>5. Data Retention & Deletion</h2>
         <p><strong>Local Data:</strong> All your plan data remains on your physical device until you delete the app or use the "Reset all data" feature in Settings.</p>
         <p><strong>Database Export:</strong> You can export and import a complete, human-readable JSON backup of your database anytime from Settings.</p>
-        <p><strong>AI Logs:</strong> For diagnostic error monitoring and rate limiting, stateless anonymous counters and truncated diagnostic logs (first 100 characters) are retained for up to 30 days and automatically purged.</p>
+        <p><strong>AI & Diagnostic Logs:</strong> For error monitoring and rate limiting, stateless anonymous counters and truncated diagnostic logs (first 100 characters) are retained for up to 30 days and automatically purged.</p>
 
-        <h2>5. Children's Privacy</h2>
+        <h2>6. Children's Privacy</h2>
         <p>Michi is not intended for children under 13. We do not knowingly collect personal information from children under 13.</p>
 
-        <h2>6. Changes to This Policy</h2>
+        <h2>7. Changes to This Policy</h2>
         <p>We may update this privacy policy from time to time. We will notify you of any changes by updating the "Last Updated" date and posting the revised policy within the app.</p>
 
-        <h2>7. Contact Us</h2>
+        <h2>8. Contact Us</h2>
         <div class="contact">
             <p>If you have any questions about this Privacy Policy or want to exercise your data rights, contact us:</p>
             <p><strong>Email:</strong> <a href="mailto:proj.el3vate@gmail.com">proj.el3vate@gmail.com</a></p>
             <p><strong>In-App:</strong> Settings → Support & Feedback → Send Feedback</p>
         </div>
+
+        <section id="terms" style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid #e5e7eb;">
+            <h1>Terms of Service</h1>
+            <p class="last-updated">Last Updated: November 2026</p>
+
+            <p>Welcome to Michi. By downloading, accessing, or using the Michi mobile application, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the app.</p>
+
+            <h2>1. Use of the App & User Responsibilities</h2>
+            <p>Michi is a personal planning and progress tracking tool. You are responsible for maintaining the confidentiality of your device and data. All plan and session data is stored locally on your device; you are responsible for utilizing the in-app JSON backup and export features to safeguard your records across devices or app reinstalls.</p>
+
+            <h2>2. In-App Purchases & Subscriptions</h2>
+            <p>Michi offers optional premium features ("Michi Pro") available via auto-renewing subscriptions (Monthly, Annual) or one-time purchases (Lifetime), processed through Google Play Billing:</p>
+            <ul>
+                <li><strong>Payment:</strong> Payment is charged to your Google Play account upon confirmation of purchase.</li>
+                <li><strong>Auto-Renewal:</strong> Subscriptions automatically renew unless auto-renew is turned off at least 24 hours before the end of the current billing period.</li>
+                <li><strong>Managing Subscriptions:</strong> You can manage, modify, or cancel your subscription at any time in your Google Play Store Account Settings (<code>play.google.com/store/account/subscriptions</code>).</li>
+                <li><strong>Refunds:</strong> Refund requests are governed by Google Play Store refund policies and must be requested directly through Google Play.</li>
+            </ul>
+
+            <h2>3. AI Disclaimer & Educational Use</h2>
+            <p>AI features in Michi (including plan generation, curriculum structuring, and reflection note formatting) are powered by third-party artificial intelligence models. AI-generated suggestions, milestone targets, tasks, and tips are for <strong>informational, educational, and personal planning purposes only</strong>.</p>
+            <p>Michi does not provide certified medical, psychological, legal, financial, or professional advice. Always exercise discretion and consult qualified professionals where appropriate.</p>
+
+            <h2>4. Intellectual Property</h2>
+            <p>The Michi application, branding, user interface design, logos, and proprietary algorithms are the intellectual property of the Michi team. Your personal content, notes, and user-generated plans remain 100% yours.</p>
+
+            <h2>5. Limitation of Liability</h2>
+            <p>Michi is provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind. To the fullest extent permitted by law, we shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use the service.</p>
+
+            <h2>6. Termination & Changes</h2>
+            <p>We reserve the right to modify these Terms of Service at any time. Continued use of Michi after any updates constitutes your acceptance of the revised terms.</p>
+
+            <h2>7. Contact</h2>
+            <div class="contact">
+                <p>For questions regarding these Terms of Service, contact us at <a href="mailto:proj.el3vate@gmail.com">proj.el3vate@gmail.com</a>.</p>
+            </div>
+        </section>
 
         <hr style="margin: 2rem 0; border: none; border-top: 1px solid #e5e7eb;">
         
