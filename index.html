@@ -116,7 +116,7 @@
         <p>Your personal data stays privately on your device. External transmission occurs only in the following transparent scenarios:</p>
         <ul>
             <li>You explicitly use "Generate with AI" or "Format Notes" (routed to vetted AI providers under strict Zero Data Retention).</li>
-            <li>You purchase or restore a Michi Pro subscription (processed anonymously through RevenueCat and Google Play Billing).</li>
+            <li>You purchase or restore a Michi Pro subscription (processed anonymously through RevenueCat and your platform's app store: Apple App Store or Google Play).</li>
             <li>An unexpected error occurs (anonymized crash traces collected by Sentry to fix bugs).</li>
         </ul>
 
@@ -145,7 +145,7 @@
         <p>To ensure app reliability and deliver subscription entitlements, Michi integrates with trusted, privacy-conscious service providers:</p>
         <ul>
             <li><strong>Sentry:</strong> Anonymized crash logs and device diagnostics (such as OS version and device model) to detect errors and improve performance. No personal plans, notes, or identifiable details are collected.</li>
-            <li><strong>RevenueCat & Google Play Billing:</strong> Handles purchase verification and subscription receipts using an anonymous app user ID. No financial or credit card data is accessible to Michi.</li>
+            <li><strong>RevenueCat & App Store Billing:</strong> Handles purchase verification and subscription receipts (via Apple App Store or Google Play) using an anonymous app user ID. No financial or credit card data is accessible to Michi.</li>
             <li><strong>Supabase:</strong> Stateless cloud edge functions that proxy AI requests and enforce fair rate limits without persisting your plan contents or reflection notes.</li>
         </ul>
 
@@ -186,12 +186,12 @@
             <p>Michi is a personal planning and progress tracking tool. You are responsible for maintaining the confidentiality of your device and data. All plan and session data is stored locally on your device; you are responsible for utilizing the in-app JSON backup and export features to safeguard your records across devices or app reinstalls.</p>
 
             <h2>2. In-App Purchases & Subscriptions</h2>
-            <p>Michi offers optional premium features ("Michi Pro") available via auto-renewing subscriptions (Monthly, Annual) or one-time purchases (Lifetime), processed through Google Play Billing:</p>
+            <p>Michi offers optional premium features ("Michi Pro") available via auto-renewing subscriptions (Monthly, Annual) or one-time purchases (Lifetime), processed securely through the Apple App Store or Google Play:</p>
             <ul>
-                <li><strong>Payment:</strong> Payment is charged to your Google Play account upon confirmation of purchase.</li>
-                <li><strong>Auto-Renewal:</strong> Subscriptions automatically renew unless auto-renew is turned off at least 24 hours before the end of the current billing period.</li>
-                <li><strong>Managing Subscriptions:</strong> You can manage, modify, or cancel your subscription at any time in your Google Play Store Account Settings (<code>play.google.com/store/account/subscriptions</code>).</li>
-                <li><strong>Refunds:</strong> Refund requests are governed by Google Play Store refund policies and must be requested directly through Google Play.</li>
+                <li><strong>Payment:</strong> Payment is charged to your Apple ID or Google Play account upon confirmation of purchase.</li>
+                <li><strong>Auto-Renewal:</strong> Recurring subscriptions automatically renew unless auto-renew is turned off at least 24 hours before the end of the current billing period.</li>
+                <li><strong>Managing Subscriptions:</strong> You can manage, modify, or cancel your subscription at any time in your store account settings (<code>apps.apple.com/account/subscriptions</code> on iOS or <code>play.google.com/store/account/subscriptions</code> on Android).</li>
+                <li><strong>Refunds:</strong> Refund requests are governed by the respective store's refund policies (Apple App Store or Google Play) and must be submitted directly to the store through which the purchase was made.</li>
             </ul>
 
             <h2>3. AI Disclaimer & Educational Use</h2>
