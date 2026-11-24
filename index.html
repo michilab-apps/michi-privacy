@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy &amp; Terms of Service - Michi</title>
+    <title>Privacy Policy - Michi</title>
+    <meta name="description" content="Privacy Policy for Michi, the personal planning and progress app by MichiLab.">
+    <meta property="og:title" content="Privacy Policy - Michi">
+    <meta property="og:description" content="Privacy Policy for Michi, the personal planning and progress app by MichiLab.">
+    <meta property="og:type" content="website">
     <style>
         * {
             margin: 0;
@@ -29,11 +33,17 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         .nav-tabs {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
             display: flex;
             gap: 12px;
-            margin-bottom: 2rem;
-            padding-bottom: 1.25rem;
+            margin: -40px -40px 2rem -40px;
+            padding: 20px 40px;
             border-bottom: 1px solid #e5e7eb;
+            border-radius: 12px 12px 0 0;
         }
         .nav-tab {
             display: inline-flex;
@@ -52,6 +62,10 @@
             background: #e0e7ff;
             color: #2563eb;
             text-decoration: none;
+        }
+        .nav-tab.active {
+            background: #2563eb;
+            color: #ffffff;
         }
         h1 {
             font-size: 2rem;
@@ -119,12 +133,81 @@
         a:hover {
             text-decoration: underline;
         }
+
+        /* Dark Mode (Michi Theme) */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: #121212;
+                color: #e5e7eb;
+            }
+            .container {
+                background: #1e1e1e;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+            }
+            .nav-tabs {
+                background: rgba(30, 30, 30, 0.95);
+                border-bottom-color: #2e2e2e;
+            }
+            .nav-tab {
+                background: #2a2a2a;
+                color: #d1d5db;
+            }
+            .nav-tab:hover {
+                background: #3730a3;
+                color: #c7d2fe;
+            }
+            .nav-tab.active {
+                background: #9F8BFF;
+                color: #0f0f17;
+                font-weight: 600;
+            }
+            h1 {
+                color: #f9fafb;
+            }
+            .last-updated {
+                color: #9ca3af;
+            }
+            h2 {
+                color: #9F8BFF;
+            }
+            p, li {
+                color: #d1d5db;
+            }
+            .highlight-box {
+                background: #1e1b4b;
+                border-left-color: #9F8BFF;
+            }
+            .highlight-box h3 {
+                color: #c7d2fe;
+            }
+            .ai-disclosure {
+                background: #2d2006;
+                border-color: #b45309;
+            }
+            .ai-disclosure h3 {
+                color: #fde68a;
+            }
+            .contact {
+                background: #262626;
+            }
+            a {
+                color: #9F8BFF;
+            }
+            hr {
+                border-top-color: #2e2e2e !important;
+            }
+        }
+
         @media (max-width: 600px) {
             body {
-                padding: 20px 10px;
+                padding: 16px 10px;
             }
             .container {
                 padding: 24px;
+            }
+            .nav-tabs {
+                margin: -24px -24px 1.5rem -24px;
+                padding: 16px 24px;
             }
         }
     </style>
@@ -132,13 +215,12 @@
 <body>
     <div class="container">
         <nav class="nav-tabs" aria-label="Legal document navigation">
-            <a href="#privacy" class="nav-tab">🔒 Privacy Policy</a>
-            <a href="#terms" class="nav-tab">📜 Terms of Service</a>
+            <a href="index.html" class="nav-tab active">🔒 Privacy Policy</a>
+            <a href="terms.html" class="nav-tab">📜 Terms of Service</a>
         </nav>
 
-        <section id="privacy">
-            <h1>Privacy Policy</h1>
-            <p class="last-updated">Last Updated: November 2026</p>
+        <h1>Privacy Policy</h1>
+        <p class="last-updated">Last Updated: November 2026</p>
 
         <div class="highlight-box">
             <h3>🔒 TL;DR - Quick Summary</h3>
@@ -154,39 +236,35 @@
             <li>An unexpected error occurs (anonymized crash traces collected by Sentry to fix bugs).</li>
         </ul>
 
-        <h2>2. AI Data Processing (Apple 5.1.2i & Google Play Disclosure)</h2>
-        
+        <h2>2. AI Plan Generation & Note Formatting</h2>
+        <p>When you choose to use our optional AI features, we transmit minimal context to structure your curriculum or tidy your reflections:</p>
+        <ul>
+            <li><strong>Curriculum Planning:</strong> Your pursuit title, experience level, and optional pacing context.</li>
+            <li><strong>Session Reflection Formatting:</strong> The raw text notes you choose to structure.</li>
+        </ul>
+
         <div class="ai-disclosure">
-            <h3>⚠️ Third-Party AI Data Processing & Zero Data Retention</h3>
-            <p>When you explicitly invoke AI plan generation or note formatting, Michi transmits your <strong>plan topic, experience level, optional context, or the note text you choose to format</strong> through secure HTTPS to vetted AI providers via OpenRouter:</p>
+            <h3>🤖 AI Provider Privacy & Zero Data Retention Guarantees</h3>
+            <p>We route requests through vetted industry AI providers (OpenAI GPT-6 Luna, Meta Llama 3.3 via Groq, Mistral AI, Google Gemini, and DeepSeek via OpenRouter) under enterprise agreements featuring <strong>Zero Data Retention (ZDR)</strong>:</p>
             <ul>
-                <li><strong>AI Providers:</strong> OpenAI (via Microsoft Azure), Meta Llama (via Groq), Mistral AI (EU Sovereign Cloud), Google Gemini (via Google Cloud Vertex AI), and DeepSeek (via OpenRouter)</li>
-                <li><strong>Purpose:</strong> Generate customized sequential stages, goals, actionable tasks, and format reflection notes</li>
-                <li><strong>Zero Data Retention (ZDR) Guarantee:</strong> All AI requests are routed exclusively to endpoints that enforce strict Zero Data Retention (<code>zdr: true</code>) and training denial (<code>data_collection: "deny"</code>). Your prompts are <strong>never used to train AI models</strong></li>
-                <li><strong>Security in Transit:</strong> All communications use TLS/HTTPS encryption</li>
+                <li><strong>No Model Training:</strong> Your prompts, goals, and reflections are <strong>never</strong> used to train or fine-tune public AI models.</li>
+                <li><strong>Stateless Execution:</strong> Data is processed in transient memory to generate the response and is not stored by AI providers beyond the immediate request-response window.</li>
+                <li><strong>Explicit Voluntary Consent:</strong> Per Apple Guideline 5.1.2(i) and GDPR standards, you are presented with an explicit consent modal identifying third-party AI processors before your first generation. You can revoke this permission anytime in Settings.</li>
             </ul>
         </div>
 
-        <p><strong>Your consent is required.</strong> Before your first AI generation, Michi presents an explicit consent modal that:</p>
+        <h2>3. Third-Party Infrastructure & Diagnostics</h2>
+        <p>To deliver a fast, reliable, and secure experience, we work with industry-standard infrastructure providers:</p>
         <ul>
-            <li>Identifies the AI providers and transmission channels by name</li>
-            <li>Explains what data will be processed and why</li>
-            <li>Allows you to decline without losing core app functionality (you can create and track plans manually)</li>
-            <li>Provides an instant toggle to revoke AI consent anytime in Settings</li>
+            <li><strong>Supabase:</strong> Serves as our stateless backend gateway to route AI requests and verify rate limits. No personal pursuit data is stored in cloud databases.</li>
+            <li><strong>RevenueCat:</strong> Validates app store receipts for Michi Pro subscriptions. We do not receive or store your credit card or financial details.</li>
+            <li><strong>Sentry:</strong> Collects anonymous crash logs, device OS versions, and stack traces to fix unexpected errors. Stack traces do not contain your personal notes.</li>
         </ul>
 
-        <h2>3. Diagnostics, Billing & Cloud Infrastructure</h2>
-        <p>To ensure app reliability and deliver subscription entitlements, Michi integrates with trusted, privacy-conscious service providers:</p>
+        <h2>4. No Advertising & No Data Sales</h2>
+        <p>Our business model is simple: we sell software, not your data.</p>
         <ul>
-            <li><strong>Sentry:</strong> Anonymized crash logs and device diagnostics (such as OS version and device model) to detect errors and improve performance. No personal plans, notes, or identifiable details are collected.</li>
-            <li><strong>RevenueCat & App Store Billing:</strong> Handles purchase verification and subscription receipts (via Apple App Store or Google Play) using an anonymous app user ID. No financial or credit card data is accessible to Michi.</li>
-            <li><strong>Supabase:</strong> Stateless cloud edge functions that proxy AI requests and enforce fair rate limits without persisting your plan contents or reflection notes.</li>
-        </ul>
-
-        <h2>4. What We Don't Do</h2>
-        <ul>
-            <li>❌ We do not sell your personal data or personal progress history to third parties</li>
-            <li>❌ We do not use your personal notes or goals to train AI models</li>
+            <li>❌ We do not sell your personal data or session history to data brokers</li>
             <li>❌ We do not track your behavior across other apps or websites</li>
             <li>❌ We do not show you third-party advertisements</li>
             <li>❌ We do not require a mandatory cloud account to use the app</li>
@@ -209,49 +287,11 @@
             <p><strong>Email:</strong> <a href="mailto:michilab.app@gmail.com">michilab.app@gmail.com</a></p>
             <p><strong>In-App:</strong> Settings → Support & Feedback → Send Feedback</p>
         </div>
-        </section>
-
-        <section id="terms" style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid #e5e7eb;">
-            <h1>Terms of Service</h1>
-            <p class="last-updated">Last Updated: November 2026</p>
-
-            <p>Welcome to Michi. By downloading, accessing, or using the Michi mobile application, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the app.</p>
-
-            <h2>1. Use of the App & User Responsibilities</h2>
-            <p>Michi is a personal planning and progress tracking tool. You are responsible for maintaining the confidentiality of your device and data. All plan and session data is stored locally on your device; you are responsible for utilizing the in-app JSON backup and export features to safeguard your records across devices or app reinstalls.</p>
-
-            <h2>2. In-App Purchases & Subscriptions</h2>
-            <p>Michi offers optional premium features ("Michi Pro") available via auto-renewing subscriptions (Monthly, Annual) or one-time purchases (Lifetime), processed securely through the Apple App Store or Google Play:</p>
-            <ul>
-                <li><strong>Payment:</strong> Payment is charged to your Apple ID or Google Play account upon confirmation of purchase.</li>
-                <li><strong>Auto-Renewal:</strong> Recurring subscriptions automatically renew unless auto-renew is turned off at least 24 hours before the end of the current billing period.</li>
-                <li><strong>Managing Subscriptions:</strong> You can manage, modify, or cancel your subscription at any time in your store account settings (<code>apps.apple.com/account/subscriptions</code> on iOS or <code>play.google.com/store/account/subscriptions</code> on Android).</li>
-                <li><strong>Refunds:</strong> Refund requests are governed by the respective store's refund policies (Apple App Store or Google Play) and must be submitted directly to the store through which the purchase was made.</li>
-            </ul>
-
-            <h2>3. AI Disclaimer & Educational Use</h2>
-            <p>AI features in Michi (including plan generation, curriculum structuring, and reflection note formatting) are powered by third-party artificial intelligence models. AI-generated suggestions, milestone targets, tasks, and tips are for <strong>informational, educational, and personal planning purposes only</strong>.</p>
-            <p>Michi does not provide certified medical, psychological, legal, financial, or professional advice. Always exercise discretion and consult qualified professionals where appropriate.</p>
-
-            <h2>4. Intellectual Property</h2>
-            <p>The Michi application, branding, user interface design, logos, and proprietary algorithms are the intellectual property of the Michi team. Your personal content, notes, and user-generated plans remain 100% yours.</p>
-
-            <h2>5. Limitation of Liability</h2>
-            <p>Michi is provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind. To the fullest extent permitted by law, we shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use the service.</p>
-
-            <h2>6. Termination & Changes</h2>
-            <p>We reserve the right to modify these Terms of Service at any time. Continued use of Michi after any updates constitutes your acceptance of the revised terms.</p>
-
-            <h2>7. Contact</h2>
-            <div class="contact">
-                <p>For questions regarding these Terms of Service, contact us at <a href="mailto:michilab.app@gmail.com">michilab.app@gmail.com</a>.</p>
-            </div>
-        </section>
 
         <hr style="margin: 2rem 0; border: none; border-top: 1px solid #e5e7eb;">
         
         <p style="font-size: 0.9rem; color: #666; text-align: center;">
-            By using Michi, you agree to our <a href="#privacy">Privacy Policy</a> and <a href="#terms">Terms of Service</a>.<br>
+            By using Michi, you agree to our <a href="index.html">Privacy Policy</a> and <a href="terms.html">Terms of Service</a>.<br>
             If you do not agree, please do not use our app.
         </p>
     </div>
