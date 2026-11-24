@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Michi</title>
+    <meta name="description" content="Terms of Service for Michi, the personal planning and progress app by MichiLab.">
+    <meta property="og:title" content="Terms of Service - Michi">
+    <meta property="og:description" content="Terms of Service for Michi, the personal planning and progress app by MichiLab.">
+    <meta property="og:type" content="website">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .nav-tabs {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            display: flex;
+            gap: 12px;
+            margin: -40px -40px 2rem -40px;
+            padding: 20px 40px;
+            border-bottom: 1px solid #e5e7eb;
+            border-radius: 12px 12px 0 0;
+        }
+        .nav-tab {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            border-radius: 9999px;
+            background: #f3f4f6;
+            color: #374151;
+            font-weight: 500;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .nav-tab:hover {
+            background: #e0e7ff;
+            color: #2563eb;
+            text-decoration: none;
+        }
+        .nav-tab.active {
+            background: #2563eb;
+            color: #ffffff;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+        }
+        .last-updated {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+        h2 {
+            font-size: 1.25rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #2563eb;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        p {
+            margin-bottom: 1rem;
+            color: #444;
+        }
+        ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+            color: #444;
+        }
+        .highlight-box {
+            background: #eff6ff;
+            border-left: 4px solid #2563eb;
+            padding: 16px;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .highlight-box h3 {
+            color: #1e40af;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        .contact {
+            background: #f3f4f6;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Dark Mode (Michi Theme) */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: #121212;
+                color: #e5e7eb;
+            }
+            .container {
+                background: #1e1e1e;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+            }
+            .nav-tabs {
+                background: rgba(30, 30, 30, 0.95);
+                border-bottom-color: #2e2e2e;
+            }
+            .nav-tab {
+                background: #2a2a2a;
+                color: #d1d5db;
+            }
+            .nav-tab:hover {
+                background: #3730a3;
+                color: #c7d2fe;
+            }
+            .nav-tab.active {
+                background: #9F8BFF;
+                color: #0f0f17;
+                font-weight: 600;
+            }
+            h1 {
+                color: #f9fafb;
+            }
+            .last-updated {
+                color: #9ca3af;
+            }
+            h2 {
+                color: #9F8BFF;
+            }
+            p, li {
+                color: #d1d5db;
+            }
+            .highlight-box {
+                background: #1e1b4b;
+                border-left-color: #9F8BFF;
+            }
+            .highlight-box h3 {
+                color: #c7d2fe;
+            }
+            .contact {
+                background: #262626;
+            }
+            a {
+                color: #9F8BFF;
+            }
+            hr {
+                border-top-color: #2e2e2e !important;
+            }
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 16px 10px;
+            }
+            .container {
+                padding: 24px;
+            }
+            .nav-tabs {
+                margin: -24px -24px 1.5rem -24px;
+                padding: 16px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav-tabs" aria-label="Legal document navigation">
+            <a href="index.html" class="nav-tab">🔒 Privacy Policy</a>
+            <a href="terms.html" class="nav-tab active">📜 Terms of Service</a>
+        </nav>
+
+        <h1>Terms of Service</h1>
+        <p class="last-updated">Last Updated: November 2026</p>
+
+        <div class="highlight-box">
+            <h3>📜 TL;DR - Key Commitments</h3>
+            <p>Michi is a local-first personal planning app. Your data stays on your physical device. We provide on-demand AI planning assistance and optional Pro subscriptions with transparent store-managed billing. You own your content, and AI suggestions are educational tools to help you structure your personal goals.</p>
+        </div>
+
+        <h2>1. Use of the App & User Responsibilities</h2>
+        <p>Michi is a personal planning and progress tracking tool designed to turn ambitious skills, hobbies, studies, and personal projects into actionable paths. By downloading, accessing, or using Michi, you agree to these Terms of Service.</p>
+        <p>You are responsible for maintaining the confidentiality and integrity of your device and data. All plan and session data is stored locally on your device; you are responsible for utilizing the in-app JSON backup and export features in Settings to safeguard your records across devices or app reinstalls.</p>
+
+        <h2>2. In-App Purchases & Subscriptions (Michi Pro)</h2>
+        <p>Michi offers optional premium features ("Michi Pro") available via auto-renewing subscriptions (Monthly, Annual) or one-time purchases (Lifetime), processed securely through the Apple App Store or Google Play:</p>
+        <ul>
+            <li><strong>Payment:</strong> Payment is charged to your Apple ID or Google Play account upon confirmation of purchase.</li>
+            <li><strong>Auto-Renewal:</strong> Recurring subscriptions automatically renew unless auto-renew is turned off at least 24 hours before the end of the current billing period.</li>
+            <li><strong>Managing Subscriptions:</strong> You can manage, modify, or cancel your subscription at any time in your platform store settings (<code>apps.apple.com/account/subscriptions</code> on iOS or <code>play.google.com/store/account/subscriptions</code> on Android).</li>
+            <li><strong>Refunds:</strong> Refund requests are governed by the respective store's refund policies (Apple App Store or Google Play) and must be submitted directly to the store through which the purchase was made.</li>
+        </ul>
+
+        <h2>3. AI Disclaimer & Educational Use</h2>
+        <p>AI features in Michi (including plan generation, curriculum structuring, and reflection note formatting) are powered by third-party artificial intelligence models. AI-generated suggestions, milestone targets, tasks, and tips are for <strong>informational, educational, and personal planning purposes only</strong>.</p>
+        <p>Michi does not provide certified medical, psychological, legal, financial, or professional advice. Always exercise discretion and consult qualified professionals where appropriate.</p>
+
+        <h2>4. Intellectual Property</h2>
+        <p>The Michi application, branding, user interface design, logos, and proprietary algorithms are the intellectual property of MichiLab. Your personal content, notes, and user-generated plans remain 100% yours.</p>
+
+        <h2>5. Limitation of Liability</h2>
+        <p>Michi is provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind. To the fullest extent permitted by law, MichiLab shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use the service.</p>
+
+        <h2>6. Termination & Changes</h2>
+        <p>We reserve the right to modify these Terms of Service at any time. Continued use of Michi after any updates constitutes your acceptance of the revised terms.</p>
+
+        <h2>7. Contact</h2>
+        <div class="contact">
+            <p>For questions regarding these Terms of Service, contact us:</p>
+            <p><strong>Email:</strong> <a href="mailto:michilab.app@gmail.com">michilab.app@gmail.com</a></p>
+            <p><strong>In-App:</strong> Settings → Support & Feedback → Send Feedback</p>
+        </div>
+
+        <hr style="margin: 2rem 0; border: none; border-top: 1px solid #e5e7eb;">
+        
+        <p style="font-size: 0.9rem; color: #666; text-align: center;">
+            By using Michi, you agree to our <a href="index.html">Privacy Policy</a> and <a href="terms.html">Terms of Service</a>.<br>
+            If you do not agree, please do not use our app.
+        </p>
+    </div>
+</body>
+</html>
