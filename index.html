@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Privacy Policy - Michi</title>
     <meta name="description" content="Privacy Policy for Michi, the personal planning and progress app by MichiLab.">
     <meta property="og:title" content="Privacy Policy - Michi">
@@ -23,7 +23,7 @@
             color: #333;
             max-width: 800px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 40px max(20px, env(safe-area-inset-right, 0px)) max(40px, env(safe-area-inset-bottom, 0px)) max(20px, env(safe-area-inset-left, 0px));
             background: #f5f5f5;
         }
         .container {
@@ -39,7 +39,8 @@
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(8px);
             display: flex;
-            gap: 12px;
+            flex-wrap: wrap;
+            gap: 8px 12px;
             margin: -40px -40px 2rem -40px;
             padding: 20px 40px;
             border-bottom: 1px solid #e5e7eb;
@@ -48,6 +49,8 @@
         .nav-tab {
             display: inline-flex;
             align-items: center;
+            min-block-size: 44px;
+            box-sizing: border-box;
             gap: 6px;
             padding: 8px 16px;
             border-radius: 9999px;
@@ -71,6 +74,7 @@
             font-size: 2rem;
             margin-bottom: 0.5rem;
             color: #1a1a1a;
+            text-wrap: balance;
         }
         .last-updated {
             color: #666;
@@ -84,10 +88,12 @@
             color: #2563eb;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            text-wrap: balance;
         }
         p {
             margin-bottom: 1rem;
             color: #444;
+            text-wrap: pretty;
         }
         ul {
             margin-left: 1.5rem;
@@ -96,6 +102,7 @@
         li {
             margin-bottom: 0.5rem;
             color: #444;
+            text-wrap: pretty;
         }
         .highlight-box {
             background: #eff6ff;
@@ -200,14 +207,14 @@
 
         @media (max-width: 600px) {
             body {
-                padding: 16px 10px;
+                padding: max(16px, env(safe-area-inset-top, 0px)) max(10px, env(safe-area-inset-right, 0px)) max(24px, env(safe-area-inset-bottom, 0px)) max(10px, env(safe-area-inset-left, 0px));
             }
             .container {
                 padding: 24px;
             }
             .nav-tabs {
                 margin: -24px -24px 1.5rem -24px;
-                padding: 16px 24px;
+                padding: 12px 16px;
             }
         }
     </style>
