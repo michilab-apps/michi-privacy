@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
     <title>Privacy Policy - Michi</title>
     <meta name="description" content="Privacy Policy for Michi, the personal planning and progress app by MichiLab.">
     <meta property="og:title" content="Privacy Policy - Michi">
@@ -214,7 +215,7 @@
             }
             .nav-tabs {
                 margin: -24px -24px 1.5rem -24px;
-                padding: 12px 16px;
+                padding: max(12px, env(safe-area-inset-top, 0px)) 16px 12px 16px;
             }
         }
     </style>
