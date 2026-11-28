@@ -264,7 +264,7 @@
         <h2>3. Third-Party Infrastructure & Diagnostics</h2>
         <p>To deliver a fast, reliable, and secure experience, we work with industry-standard infrastructure providers:</p>
         <ul>
-            <li><strong>Supabase:</strong> Serves as our stateless backend gateway to route AI requests and verify rate limits. No personal plan data is stored in cloud databases.</li>
+            <li><strong>Supabase:</strong> Serves as our stateless backend gateway to route AI requests and verify anonymous rate-limit quotas. No personal plan data, prompts, or reflection note text are stored in cloud databases.</li>
             <li><strong>RevenueCat:</strong> Validates app store receipts for Michi Pro subscriptions. We do not receive or store your credit card or financial details.</li>
             <li><strong>Sentry:</strong> Collects anonymous crash logs, device OS versions, and stack traces to fix unexpected errors. Stack traces do not contain your personal notes.</li>
         </ul>
@@ -281,7 +281,7 @@
         <h2>5. Data Retention & Deletion</h2>
         <p><strong>Local Data:</strong> All your plan data remains on your physical device until you delete the app or use the "Reset all data" feature in Settings.</p>
         <p><strong>Database Export:</strong> You can export and import a complete, human-readable JSON backup of your database anytime from Settings.</p>
-        <p><strong>AI & Diagnostic Logs:</strong> For error monitoring and rate limiting, stateless anonymous counters and truncated diagnostic logs (first 100 characters) are retained for up to 30 days and automatically purged.</p>
+        <p><strong>AI & Diagnostic Logs:</strong> Server-side operational telemetry (model, token counts, latency, and error status—with zero raw prompt or note text stored in cloud databases) and rolling weekly/daily rate-limit counters are retained for up to 30 days and automatically purged. Anonymous one-time starter quota counters (keyed by an app/device-scoped anonymous identifier) are retained beyond 30 days solely to enforce free starter limits. Optional on-device debug logs keep only the 50 most recent entries with prompts truncated to 100 characters until you wipe app data.</p>
 
         <h2>6. Children's Privacy</h2>
         <p>Michi is not intended for children under 13. We do not knowingly collect personal information from children under 13.</p>
